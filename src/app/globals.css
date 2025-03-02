@@ -687,6 +687,36 @@ a {
 }
 
 
+/* Blog CSS */
+.product-tabs .tabs button {
+  padding: 10px 20px;
+  border: none;
+  background: #f8f9fa;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.product-tabs .tabs button.active {
+  background: #00BF63;
+  color: white;
+}
+.blog-card img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.blog-card .card-body {
+  padding: 20px;
+  text-align: center;
+}
+.blog-card .btn-success {
+  background: #00BF63;
+  border: none;
+}
+.blog-card .btn-success:hover {
+  background: #008c4c;
+}
+
+
+
 /* Footer Section */
 .footer {
   background-color: #00BF63;

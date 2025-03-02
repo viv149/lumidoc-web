@@ -52,27 +52,27 @@ const category = [
         name: "Auto Clave",
         image: "/assets/img/category/cat-5.png",
         description: "High-pressure steam sterilization for medical instruments.",
-        link: "/products/auto-clave"
+        link: "/main/product"
     },
     {
         id: 2,
         name: "Hospital Bed Furniture",
         image: "/assets/img/category/cat-2.jpg",
         description: "Ergonomic & adjustable hospital beds for patient comfort.",
-        link: "/products/hospital-bed-furniture"
+        link: "/main/product"
     },
     {
         id: 3,
         name: "OT Lights",
         image: "/assets/img/category/cat-3.png",
         description: "Advanced surgical lighting for precision and clarity.",
-        link: "/products/ot-lights"
+        link: "/main/product"
     },
     {
         id: 4,
         name: "Electro Surgical Equipment",
         image: "/assets/img/category/cat-4.png",
         description: "High-performance tools for surgical procedures.",
-        link: "/products/electro-surgical-equipment"
+        link: "/main/product"
     }
 ];
