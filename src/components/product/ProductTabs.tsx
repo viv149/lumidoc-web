@@ -24,7 +24,7 @@ const ProductTabs = ({ product }) => {
                 {activeTab === "specifications" && (
                 <ul>
                     {Object.entries(product.specifications).map(([key, value], index) => (
-                    <li key={index}><strong>{key}:</strong> {value}</li>
+                    <li key={index}><strong>{key}:</strong> {String(value)}</li>
                     ))}
                 </ul>
                 )}
