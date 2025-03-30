@@ -1,7 +1,5 @@
-import Navbar from "../components/Navbar";
 import "./globals.css";
 import Script from "next/script";
-import Footer from "../components/Footer";
 import { Bounce, ToastContainer } from "react-toastify";
 import ScrollToTop from "../components/elements/ScrollToTop";
 
@@ -22,7 +20,6 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <Navbar/>
         {children}
         <ScrollToTop/>
         <ToastContainer
@@ -38,7 +35,6 @@ export default function RootLayout({ children }) {
           theme="light"
           transition={Bounce}
         />
-        <Footer/>
         <Script 
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
           integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 

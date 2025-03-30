@@ -10,21 +10,29 @@
   },
   "dependencies": {
     "@prisma/client": "^6.3.1",
+    "bcrypt": "^5.1.1",
     "bootstrap-icons": "^1.11.3",
+    "cookies-next": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
     "next": "15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.54.2",
     "react-icons": "^5.4.0",
-    "react-toastify": "^11.0.3",
+    "react-toastify": "^11.0.5",
+    "recharts": "^2.15.1",
     "swiper": "^11.2.4"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@types/node": "22.13.1",
+    "@types/node": "^22.13.1",
     "@types/react": "19.0.8",
     "eslint": "^9",
     "eslint-config-next": "15.1.7",
-    "prisma": "^6.3.1"
+    "prisma": "^6.3.1",
+    "ts-node": "^10.9.2"
+  },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
   }
 }

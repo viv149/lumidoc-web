@@ -1,0 +1,96 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+model User {
+  id         String   @id @default(uuid())
+  name       String
+  email      String   @unique
+  password   String
+  role       Role     @default(USER) // Enum type
+  created_at DateTime @default(now())
+  updated_at DateTime @default(now())
+}
+
+model Blog {
+  id             String   @id @default(uuid())
+  title          String
+  content        String
+  seoTitle       String
+  seoDescription String
+  created_at     DateTime @default(now())
+  updated_at     DateTime @default(now())
+}
+
+model Category {
+  id         String    @id @default(uuid())
+  name       String
+  products   Product[]
+  created_at DateTime  @default(now())
+  updated_at DateTime  @default(now())
+}
+
+model Product {
+  id             String   @id @default(uuid())
+  categoryId     String
+  name           String
+  model          String
+  smallDesc      String
+  description    String
+  features       String
+  specifications String
+  seoTitle       String
+  seoDescription String
+  created_at     DateTime @default(now())
+  updated_at     DateTime @default(now())
+  category       Category @relation(fields: [categoryId], references: [id])
+}
+
+model WebsiteSettings {
+  id          String   @id @default(uuid())
+  logo        String
+  name        String
+  socialLinks String
+  whatsapp    String
+  address     String
+  created_at  DateTime @default(now())
+  updated_at  DateTime @default(now())
+}
+
+model ProductEnquiry {
+  id         String   @id @default(uuid())
+  productId  String
+  model      String
+  name       String
+  email      String
+  contact    String
+  message    String
+  created_at DateTime @default(now())
+  updated_at DateTime @default(now())
+}
+
+model ContactMessage {
+  id         String   @id @default(uuid())
+  name       String
+  email      String
+  phone      String
+  message    String
+  created_at DateTime @default(now())
+  updated_at DateTime @default(now())
+}

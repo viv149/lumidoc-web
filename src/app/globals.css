@@ -4,12 +4,7 @@
   --white: #ededed;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --main-color: #00BF63;
-    --white: #ededed;
-  }
-}
+
 
 html,
 body {
@@ -95,6 +90,44 @@ a {
   background-color: #ebebeb;
   color: #028a48;
 }
+
+.lm-dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: var(--white);
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  padding: 0;
+  margin-top: 0.5rem;
+  z-index: 1050;
+}
+.lm-dropdown .dropdown-menu{
+  padding: 0;
+}
+.lm-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.lm-dropdown-item {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: var(--main-hover-color);
+  transition: background-color 0.3s ease;
+}
+
+.lm-dropdown-item:hover {
+  background-color: var(--main-color);
+}
+.lm-dropdown-item:hover .lm-dropdown-link{
+  color: var(--white);
+}
+
+.lm-dropdown-item .lm-dropdown-link{
+  text-decoration: none;
+  color: var(--main-color);
+  font-weight: 600;
+}
+
 
 .section {
   padding: 50px 0;

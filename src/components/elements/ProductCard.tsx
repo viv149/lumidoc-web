@@ -32,7 +32,8 @@ const ProductCard: React.FC<{ product: ProductProps }> = ({ product }) => {
                     View Details
                 </Link>
                 <Link
-                    href={`https://wa.me/919876543210?text=I'm interested in ${product.name}`}
+                    href={`https://wa.me/919997872017?text=I'm interested in ${product.name}`}
+                    target="_blank"
                     className="lm-btn lm-btn-white"
                 >
                     Enquire Now
